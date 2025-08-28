@@ -1,0 +1,27 @@
+{
+  "name": "tp1-jaqueline-atienza",
+  "version": "1.0.0",
+  "description": "Modelar un torneo con equipos, jugadores, deportes y partidos aplicando **clases, interfaces, herencia, encapsulamiento, polimorfismo y clases abstractas** en TypeScript.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch ./src/main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaquelineatienza/tp1-typescript-jaqueline-atienza.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaquelineatienza/tp1-typescript-jaqueline-atienza/issues"
+  },
+  "homepage": "https://github.com/jaquelineatienza/tp1-typescript-jaqueline-atienza#readme",
+  "dependencies": {
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "uuid": "^11.1.0"
+  }
+}
