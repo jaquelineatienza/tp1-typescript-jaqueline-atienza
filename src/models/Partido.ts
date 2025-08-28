@@ -27,24 +27,28 @@ export class Partido implements IIdentificable {
             this.resultado = resultado
         }
     }
-    jugar(resultado: Resultado) {
-        if (this.local === this.visitante) {
-            throw new Error("El equipo local y visitante no pueden ser el mismo")
+    jugar(resultado: Resultado): boolean {
+        if (this.local == this.visitante) {
+            console.log("El equipo local y visitante no pueden ser el mismo")
+            return false
+
         }
         //validacion para que en ambos equipos haya la misma cantidad de jugadores
         if (this.local.cantidad !== this.visitante.cantidad) {
             console.log("La cantidad de jugadores debe ser la misma en ambos equipos")
-            return
-        }
-
-        //Respuesta de resultados
-        if (resultado.golesLocal > resultado.golesVisitante) {
-            console.log("Ganaron los locales")
-        } else if (resultado.golesVisitante > resultado.golesLocal) {
-            console.log("Ganaron los visitantes")
+            return false
         } else {
-            console.log("Empate")
-        } return resultado
+            //Demostracion  de quien gano el partido
+            console.log(resultado)
+            if (resultado.golesLocal > resultado.golesVisitante) {
+                console.log("Ganaron los locales")
+            } else if (resultado.golesVisitante > resultado.golesLocal) {
+                console.log("Ganaron los visitantes")
+            } else {
+                console.log("Empate")
+            }
+            return true
+        }
 
     }
 

@@ -65,8 +65,8 @@ if (equiposValidos) {
 }
 // programacion y muestra de partidos
 
-torneos.programarPartidos(partido)
-torneos.listarPartidos()
+// torneos.programarPartidos(partido)
+// torneos.listarPartidos()
 
 console.log("----------------")
 console.log("Juego de basquet")
@@ -101,7 +101,7 @@ const equipo4 = new Equipo("My_little_ponny")
 equipo4.agregarJugador(player16)
 equipo4.agregarJugador(player17)
 equipo4.agregarJugador(player18)
-equipo4.agregarJugador(player19)
+// equipo4.agregarJugador(player19)
 equipo4.agregarJugador(player20)
 
 
@@ -121,10 +121,12 @@ const partido2 = new Partido(equipo3, equipo4);
 
 if (equiposValidos2) {
     const resultado = new Resultado(10, 8);
-    //mostreo de Resultados
-    resultado.toString()
+
     // Jugar el partido
-    partido2.jugar(resultado);
+    const result = partido2.jugar(resultado);
+    if (result === true) {
+        resultado.toString()
+    }
 }
 
 
