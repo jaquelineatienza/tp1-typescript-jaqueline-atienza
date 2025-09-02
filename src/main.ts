@@ -22,10 +22,8 @@ function agregarJugadores(equipo: Equipo) {
 
 
 
-//funcion para generar usuarios 
-const usuariosBaloncesto = generarUsuariosAleatorios(5, 'Basquet');
 
-
+const usuariosBaloncesto = generarUsuariosAleatorios(11, 'fútbol');
 
 
 //Equipo de Barbie
@@ -49,8 +47,11 @@ console.log("----------------")
 
 const futbol = new Futbool();
 const partido = new Partido(equipo1, equipo2);
+
 console.log("Locales", equipo1.nombre, "VS", "Visitantes", equipo2.nombre)
+
 const equiposValidos = futbol.validar(equipo1) && futbol.validar(equipo2);
+
 //creacion del torneo
 const torneos = new Torneo("Pelea_Matel")
 
@@ -103,8 +104,3 @@ if (equiposValidos2) {
         resultado.toString()
     }
 }
-
-
-
-
-

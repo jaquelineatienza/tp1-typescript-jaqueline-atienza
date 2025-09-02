@@ -1,7 +1,6 @@
 import type { IIdentificable } from "../interfaces/IIdentificable.js";
 import type { Partido } from "./Partido.js";
-import { v4 as uuidv4 } from 'uuid';
-
+import { generarId } from "../helpers/generar_id.js";
 
 
 //clase de torneos
@@ -11,7 +10,7 @@ export class Torneo implements IIdentificable {
     private partidos: Partido[]
 
     constructor(nombre: string) {
-        this.id = uuidv4()
+        this.id = generarId()
         this.nombre = nombre
         this.partidos = []
     }

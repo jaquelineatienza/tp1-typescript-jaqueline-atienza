@@ -7,6 +7,7 @@ import type { IIdentificable } from "../interfaces/IIdentificable.js";
 import { v4 as uuidv4 } from 'uuid';
 import type { Equipo } from "./Equipo.js";
 import { Resultado } from "./Resultado.js";
+import { generarId } from "../helpers/generar_id.js";
 
 
 
@@ -22,10 +23,11 @@ export class Partido implements IIdentificable {
     ) {
         this.local = local;
         this.visitante = visitante;
-        this.id = uuidv4()
+        this.id = generarId()
         if (resultado) {
             this.resultado = resultado
         }
+
     }
     jugar(resultado: Resultado): boolean {
         if (this.local == this.visitante) {

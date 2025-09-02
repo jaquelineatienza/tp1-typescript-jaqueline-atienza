@@ -1,10 +1,5 @@
 import { basketballPositions, nombres, posicionesFutbol } from "./arrayPosiciones";
 
-
-
-
-//? Lista de nombres comunes para generar usuarios
-
 export interface Usuario {
     nombre: string;
     edad: number;
